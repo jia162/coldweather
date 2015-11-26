@@ -10,7 +10,7 @@ public class ColdWeatherOpenHelper extends SQLiteOpenHelper {
 	/*
 	 * 	province table
 	 */
-	public static final String CREATE_PROVINCE = "create table Province (" 
+	public static final String CREATE_PROVINCE = "create table Province ("
 			+ "id integer primary key autoincrement, "
 			+ "province_name text, "
 			+ "province_code text)";
@@ -25,8 +25,8 @@ public class ColdWeatherOpenHelper extends SQLiteOpenHelper {
 	/*
 	 * 	county table
 	 */
-	public static final String CREATE_COUNTY = "create table County (" 
-			+ "id integer key primary key autoincrement, "
+	public static final String CREATE_COUNTY = "create table County ("
+			+ "id integer primary key autoincrement, "
 			+ "county_name text, "
 			+ "county_code text, "
 			+ "city_id integer)";
