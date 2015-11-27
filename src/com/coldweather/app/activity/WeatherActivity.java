@@ -1,6 +1,7 @@
 package com.coldweather.app.activity;
 
 import com.coldweather.app.R;
+import com.coldweather.app.service.AutoUpdateService;
 import com.coldweather.app.util.HttpCallbackListener;
 import com.coldweather.app.util.HttpUtil;
 import com.coldweather.app.util.Utility;
@@ -141,5 +142,8 @@ public class WeatherActivity extends Activity implements OnClickListener {
 		currentDateText.setText(prefs.getString("current_date", ""));
 		weatherInfoLayout.setVisibility(View.VISIBLE);
 		cityNameText.setVisibility(View.VISIBLE);
+		
+		Intent intent = new Intent(this, AutoUpdateService.class);
+		startService(intent);
 	}
 }
